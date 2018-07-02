@@ -52,6 +52,7 @@ typedef unsigned long long ull;
 typedef std::pair<int, int> pi;
 typedef std::vector<pi> vpi;
 typedef std::vector<int> vi;
+typedef std::vector<ll> vll;
 typedef std::vector<vi> vvi;
 typedef std::vector<char> vc;
 typedef std::vector<str> vs;
@@ -923,10 +924,8 @@ LOOPREAD(c,'\n')
 int main(){
     setio("input.txt","output.txt");
     ll a0, a1, a2, n; gli(a0, a1, a2, n);
-    if (n == 0) {prt(a0);}
-    if (n == 1) {prt(a1);}
-    if (n == 2) {prt(a2);}
-    if (n < 3) return 0;
+    vll v = {a0,a1,a2};
+    if (n < 3) {prt(v[n]); return 0;}
     ll d1 = a1-a0;
     ll d2 = a2-a1;
     n -= 2;
